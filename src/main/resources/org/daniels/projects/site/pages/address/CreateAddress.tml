@@ -1,0 +1,8 @@
+<html t:type="layout" title="Contact org.daniels.projects"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <em>coming soon ...</em>
+	<t:beaneditform object="address" submitlabel="Create Address"
+    reorder="honorific,firstName,lastName,street1,street2,city,state,zip,email,phone" />
+</html>
