@@ -1,4 +1,4 @@
-<html t:type="layout" title="message:personList.title"
+<html t:type="bootstrapLayout" title="message:personList.title"
           heading="message:personList.heading" menu="PersonMenu"
           xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
 

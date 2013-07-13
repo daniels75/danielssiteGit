@@ -3,15 +3,19 @@ package org.daniels.projects.site.services;
 import java.io.IOException;
 
 import org.apache.tapestry5.SymbolConstants;
-import org.apache.tapestry5.ioc.Configuration;
 import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
+import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Local;
+import org.apache.tapestry5.services.ClasspathAssetAliasManager;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
+import org.apache.tapestry5.services.javascript.JavaScriptStack;
+import org.daniels.projects.site.constants.SiteSymbolConstants;
+import org.daniels.projects.site.services.javascript.BootstrapJavaScriptStack;
 import org.slf4j.Logger;
 
 /**
@@ -127,7 +131,18 @@ public class AppModule {
 
 		configuration.add("Timing", filter);
 	}
-
+	
+	@Contribute(ClasspathAssetAliasManager.class)
+	public static void provideClasspathAssetAliases(
+			MappedConfiguration<String, String> configuration) {
+		configuration.add("webjars", "META-INF/resources/webjars");
+	}
+	
+	public static void contributeJavaScriptStackSource(
+			MappedConfiguration<String, JavaScriptStack> configuration) {
+		configuration.addInstance(SiteSymbolConstants.BOOTSTRAP_STACK,
+				BootstrapJavaScriptStack.class);
+	}
 //	public void contributeHibernateEntityPackageManager(
 //			Configuration<String> conf) {
 //		conf.add("org.daniels.projects.site.entities");
