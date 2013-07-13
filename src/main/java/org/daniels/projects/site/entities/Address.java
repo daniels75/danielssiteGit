@@ -46,4 +46,13 @@ public class Address {
 	public Address() {
 
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 }

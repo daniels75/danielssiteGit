@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.daniels</groupId>
 	<artifactId>danielssiteGit</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.00.00.01-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Demp Tapestry 5 Application</name>
 
@@ -36,7 +36,7 @@
 						</component>
 					</components>
 					<componentProperties>
-						<drop>true</drop>
+						<drop>false</drop>
 						<jdk5>true</jdk5>
 						<propertyfile>${project.build.outputDirectory}/jdbc.properties</propertyfile>
 						<skip>${skipTests}</skip>
@@ -254,11 +254,11 @@
 			<artifactId>tapestry-core</artifactId>
 			<version>${tapestry.version}</version>
 		</dependency>	
-		<dependency>
-			<groupId>org.apache.tapestry</groupId>
-			<artifactId>tapestry-hibernate</artifactId>
-			<version>${tapestry-release-version}</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.apache.tapestry</groupId> -->
+<!-- 			<artifactId>tapestry-hibernate</artifactId> -->
+<!-- 			<version>${tapestry-release-version}</version> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>org.apache.tapestry</groupId>
 			<artifactId>tapestry-upload</artifactId>
@@ -340,11 +340,11 @@
 			</exclusions>
 		</dependency>
 		<!--  TO PSUJE !!!! -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.appfuse</groupId> -->
-<!-- 			<artifactId>appfuse-${dao.framework}</artifactId> -->
-<!-- 			<version>${appfuse.version}</version> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.appfuse</groupId>
+			<artifactId>appfuse-${dao.framework}</artifactId>
+			<version>${appfuse.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>${jdbc.groupId}</groupId>
 			<artifactId>${jdbc.artifactId}</artifactId>

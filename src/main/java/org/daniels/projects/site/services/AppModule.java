@@ -128,8 +128,8 @@ public class AppModule {
 		configuration.add("Timing", filter);
 	}
 
-	public void contributeHibernateEntityPackageManager(
-			Configuration<String> conf) {
-		conf.add("org.daniels.projects.site.entities");
-	}
+//	public void contributeHibernateEntityPackageManager(
+//			Configuration<String> conf) {
+//		conf.add("org.daniels.projects.site.entities");
+//	}
 }

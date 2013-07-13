@@ -31,7 +31,7 @@ import org.apache.tapestry5.annotations.PageActivationContext;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.corelib.components.Zone;
-import org.apache.tapestry5.hibernate.annotations.CommitAfter;
+//import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.services.ajax.AjaxResponseRenderer;
 import org.apache.tapestry5.util.AbstractSelectModel;
 import org.daniels.projects.site.entities.Department;
@@ -84,7 +84,7 @@ public class Employees
 	@Inject
 	private AjaxResponseRenderer ajaxResponseRenderer;
 
-	@CommitAfter
+	//@CommitAfter
 	Object onSuccessFromEditEmployee()
 	{
 		employeesDAO.save(editingEmployee);
@@ -93,7 +93,7 @@ public class Employees
 	}
 
 	@Log
-	@CommitAfter
+	//@CommitAfter
 	Object onSlide(Employee employee, Integer salary)
 	{
 		this.employee = employee;
