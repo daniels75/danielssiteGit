@@ -14,6 +14,7 @@ import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
+import org.apache.tapestry5.upload.services.UploadSymbols;
 import org.daniels.projects.site.constants.SiteSymbolConstants;
 import org.daniels.projects.site.services.javascript.BootstrapJavaScriptStack;
 import org.slf4j.Logger;
@@ -67,7 +68,22 @@ public class AppModule {
 		// locale names;
 		// the first locale name is the default when there's no reasonable
 		// match).
-		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en");
+		
+        configuration.add(SymbolConstants.SUPPORTED_LOCALES,
+                "en");
+        // Turn off GZip Compression since it causes issues with SiteMesh
+        configuration.add(SymbolConstants.GZIP_COMPRESSION_ENABLED, "false");
+
+        // The factory default is true but during the early stages of an application
+        // overriding to false is a good idea. In addition, this is often overridden
+        // on the command line as -Dtapestry.production-mode=false
+        configuration.add(SymbolConstants.PRODUCTION_MODE, "false");
+
+        // Maximum upload size is 2MB (size is in bytes)
+        configuration.add(UploadSymbols.FILESIZE_MAX, "2048000");
+
+        // HHAC recommended for better security as of Tapestry 5.3.6
+        configuration.add(SymbolConstants.HMAC_PASSPHRASE, "AppFuse Tapestry is Great");
 	}
 
 	/**
