@@ -1,4 +1,25 @@
-/.project
-/.classpath
-/target
-/.settings
+
+# Compiled
+target/
+test-output/
+
+# Eclipse
+.classpath
+.classpath.orig
+.project
+.settings
+.metadata
+
+# IDEA
+.idea
+*.iml
+
+# Maven
+.m2
+.repository
+
+# Checkstyle
+.checkstyle
+
+# misc
+*.orig
