@@ -8,6 +8,19 @@
 	<packaging>war</packaging>
 	<name>Demp Tapestry 5 Application</name>
 
+	<repositories>
+
+		<!-- This repository is only needed when the Tapestry version is a preview 
+			release, rather than a final release. -->
+		<repository>
+			<id>apache-staging</id>
+			<url>https://repository.apache.org/content/groups/staging/</url>
+		</repository>
+		<repository>
+			<id>howardlewisship</id>
+			<url>http://howardlewisship.com/snapshot-repository</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<finalName>danielssite</finalName>
