@@ -335,7 +335,7 @@
 
 
 
-		<!--  TO PSUJE !!!! -->
+		<!--
 		<dependency>
 			<groupId>org.daniels.common</groupId>
 			<artifactId>common-${dao.framework}</artifactId>
@@ -353,6 +353,29 @@
                     <artifactId>common-hibernate</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>		
+		-->
+		
+		
+        <dependency>
+            <groupId>org.appfuse</groupId>
+            <artifactId>appfuse-web</artifactId>
+            <version>${appfuse.version}</version>
+            <type>pom</type>
+            <!-- This exclusion and the dependency following this one allow DAO framework switching. -->
+            <!-- You only need these if you want to use JPA or iBATIS. See APF-565 for more information. -->
+            <!-- It does no harm to leave it in for Hibernate, but it's not needed. -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.appfuse</groupId>
+                    <artifactId>appfuse-hibernate</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.appfuse</groupId>
+            <artifactId>appfuse-${dao.framework}</artifactId>
+            <version>${appfuse.version}</version>
         </dependency>		
 		
 		<dependency>
@@ -446,11 +469,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
+        <!-- dependency>
             <groupId>org.directwebremoting</groupId>
             <artifactId>dwr</artifactId>
             <version>${dwr.version}</version>
-        </dependency>
+        </dependency -->
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache-web</artifactId>
@@ -596,7 +619,8 @@
 	<spring.security.version>3.1.4.RELEASE</spring.security.version>
             <urlrewrite.version>3.1.0</urlrewrite.version>     
         
-
+        <dao.framework>hibernate</dao.framework>
+        <appfuse.version>2.2.1</appfuse.version>
 	</properties>
 
 </project>

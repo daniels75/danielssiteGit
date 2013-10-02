@@ -1,4 +1,4 @@
-package org.daniels.projects.site.webapp.listener;
+package org.daniels.projects.site.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

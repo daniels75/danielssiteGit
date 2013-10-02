@@ -13,7 +13,7 @@
 <div id="wrapper">
 
 	<div id="top" class="clear">
-		<h1><t:pagelink page="Index">DANIELS SITE</t:pagelink></h1>
+		<h1><t:pagelink page="Index"></t:pagelink></h1>
 		
 		<ul>
             <li t:type="loop" source="pageNames" value="pageName" class="prop:classForPageName"  >
