@@ -1,4 +1,4 @@
-package org.daniels.projects.site.services;
+package org.daniels.projects.site.service;
 
 import org.appfuse.service.GenericManager;
 import org.daniels.projects.site.entities.Person;

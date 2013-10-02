@@ -3,8 +3,7 @@ package org.daniels.projects.site.entities;
 import org.appfuse.model.BaseObject;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
-@XmlRootElement
+
 @Entity @Table(name="person")
 public class Person extends BaseObject {
     private Long id;

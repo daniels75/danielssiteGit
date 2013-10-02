@@ -1,17 +1,18 @@
-package org.daniels.projects.site.services.impl;
+package org.daniels.projects.site.service.impl;
+
+import java.util.List;
+
+import javax.jws.WebService;
 
 import org.appfuse.service.impl.GenericManagerImpl;
 import org.daniels.projects.site.dao.PersonDao;
 import org.daniels.projects.site.entities.Person;
-import org.daniels.projects.site.services.PersonManager;
+import org.daniels.projects.site.service.PersonManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.jws.WebService;
-import java.util.List;
-
 @Service("personManager")
-@WebService(serviceName = "PersonService", endpointInterface = "org.daniels.projects.site.services.PersonManager")
+@WebService(serviceName = "PersonService", endpointInterface = "org.daniels.projects.site.service.PersonManager")
 public class PersonManagerImpl extends GenericManagerImpl<Person, Long>
 		implements PersonManager {
 	PersonDao personDao;
