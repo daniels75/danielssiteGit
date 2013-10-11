@@ -41,4 +41,34 @@ public class PersonManagerImpl extends GenericManagerImpl<Person, Long>
 		personDao.save(person);
 		return Response.status(201).entity(result).build();
 	}
+
+	@Override
+	public Response deletePerson(Long id) {
+		personDao.remove(id);
+		String result = "Person deleted : " + id;
+		return Response.status(201).entity(result).build();
+	}
+
+	@Override
+	public Response deletePersonByLastName(Long id) {
+		personDao.remove(id);
+		String result = "Person deleted : " + id;
+		return Response.status(201).entity(result).build();
+	}
+
+	@Override
+	public Response updatePerson(Person person) {
+		personDao.save(person);
+		String result = "Person updated : " + person;
+		return Response.status(201).entity(result).build();
+	}
+
+	@Override
+	public Response updatePersonNoContext(Person person) {
+		personDao.save(person);
+		String result = "Person updated : " + person;
+		return Response.status(201).entity(result).build();
+	}
+	
+	
 }
