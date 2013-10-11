@@ -3,6 +3,7 @@ package org.daniels.projects.site.service.impl;
 import java.util.List;
 
 import javax.jws.WebService;
+import javax.ws.rs.core.Response;
 
 import org.appfuse.service.impl.GenericManagerImpl;
 import org.daniels.projects.site.dao.PersonDao;
@@ -32,5 +33,12 @@ public class PersonManagerImpl extends GenericManagerImpl<Person, Long>
 
 	public List<Person> getPeople() {
 		return personDao.getAll();
+	}
+
+	@Override
+	public Response createPersonInJSON(Person person) {
+		String result = "Person saved : " + person;
+		personDao.save(person);
+		return Response.status(201).entity(result).build();
 	}
 }
