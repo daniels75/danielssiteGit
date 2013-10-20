@@ -4,4 +4,4 @@
 4. Remove appfuse dependency (appfuse-data-common, appfuse-hibernate, appfuse-service) - move app fuse to your project
 5. Remove unnecessary dependencies
 6. Add Spring Security
-
+7. Add test - copy from AppFuse and tutorial-service
