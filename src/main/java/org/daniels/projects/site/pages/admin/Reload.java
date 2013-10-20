@@ -9,7 +9,7 @@ import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.ApplicationGlobals;
 import org.daniels.projects.site.listener.StartupListener;
-import org.daniels.samples.webapp.pages.Home;
+import org.daniels.projects.site.pages.Home;
 
 /**
  * @author Serge Eby

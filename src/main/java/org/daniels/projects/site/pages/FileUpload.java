@@ -15,7 +15,6 @@ import org.apache.tapestry5.services.Context;
 import org.appfuse.Constants;
 import org.daniels.projects.site.data.FileData;
 import org.daniels.projects.site.services.SecurityContext;
-import org.daniels.samples.webapp.pages.Home;
 import org.slf4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;

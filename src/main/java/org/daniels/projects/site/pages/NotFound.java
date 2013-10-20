@@ -6,7 +6,6 @@ import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.PageRenderLinkSource;
-import org.daniels.samples.webapp.pages.Home;
 
 /**
  * Page to be displayed whenever a page is not found (404 error)

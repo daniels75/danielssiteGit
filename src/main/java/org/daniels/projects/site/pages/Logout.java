@@ -4,7 +4,6 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.Cookies;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.Session;
-import org.daniels.samples.webapp.pages.Home;
 import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
 
 /**

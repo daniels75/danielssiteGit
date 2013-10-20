@@ -12,8 +12,8 @@ import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 import org.appfuse.dao.SearchException;
 import org.appfuse.model.User;
 import org.appfuse.service.UserManager;
+import org.daniels.projects.site.pages.Home;
 import org.daniels.projects.site.pages.UserEdit;
-import org.daniels.samples.webapp.pages.Home;
 import org.slf4j.Logger;
 
 import java.util.List;

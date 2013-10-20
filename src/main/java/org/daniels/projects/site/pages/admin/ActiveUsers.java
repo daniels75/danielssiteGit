@@ -8,7 +8,7 @@ import org.apache.tapestry5.services.BeanModelSource;
 import org.apache.tapestry5.services.Context;
 import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.appfuse.model.User;
-import org.daniels.samples.webapp.pages.Home;
+import org.daniels.projects.site.pages.Home;
 
 import java.util.Set;
 

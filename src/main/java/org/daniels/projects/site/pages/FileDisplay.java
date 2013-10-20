@@ -4,7 +4,6 @@ import org.apache.tapestry5.PersistenceConstants;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.daniels.projects.site.data.FileData;
-import org.daniels.samples.webapp.pages.Home;
 
 /**
  * This class handles the uploading of a file and writing it to

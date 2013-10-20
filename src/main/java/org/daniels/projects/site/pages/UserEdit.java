@@ -20,7 +20,6 @@ import org.daniels.projects.site.pages.admin.UserList;
 import org.daniels.projects.site.services.EmailService;
 import org.daniels.projects.site.services.SecurityContext;
 import org.daniels.projects.site.utils.RequestUtil;
-import org.daniels.samples.webapp.pages.Home;
 import org.slf4j.Logger;
 import org.springframework.mail.MailException;
 import org.springframework.security.access.AccessDeniedException;
